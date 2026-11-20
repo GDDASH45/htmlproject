@@ -199,6 +199,39 @@
       color: var(--muted);
       line-height: 1.7;
     }
+    .steps {
+      display: grid;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: step;
+    }
+
+    .steps li {
+      display: grid;
+      grid-template-columns: 2.5rem 1fr;
+      align-items: start;
+      gap: 1rem;
+      color: var(--muted);
+      line-height: 1.7;
+      counter-increment: step;
+    }
+
+    .steps li::before {
+      content: counter(step, decimal-leading-zero);
+      display: grid;
+      width: 2.5rem;
+      aspect-ratio: 1;
+      place-items: center;
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      color: var(--accent-strong);
+      font-size: 0.8rem;
+      font-weight: 750;
+    }
+
+    .steps strong { color: #eef2ff; }
   </style>
 </head>
 <body>
@@ -265,6 +298,17 @@
           <p>Everything on this page is built with plain HTML and CSS, so there is no build step to maintain.</p>
         </article>
       </div>
+    </section>
+    <section class="section" id="start" aria-labelledby="start-title">
+      <div class="section-heading">
+        <p class="eyebrow">Getting started</p>
+        <h2 id="start-title">Make it yours in three steps.</h2>
+      </div>
+      <ol class="steps">
+        <li><span><strong>Change the content.</strong> Replace the example text with the information you want visitors to see.</span></li>
+        <li><span><strong>Adjust the design.</strong> Update the colors, spacing, and sections to match your idea.</span></li>
+        <li><span><strong>Publish the site.</strong> Push your changes to GitHub and let the Pages workflow deploy them.</span></li>
+      </ol>
     </section>
 
   </main>
