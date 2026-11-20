@@ -262,6 +262,15 @@
       .card-grid { grid-template-columns: 1fr; }
       .section { padding-block: 3.5rem; }
     }
+    :focus-visible {
+      outline: 3px solid var(--accent-strong);
+      outline-offset: 4px;
+      border-radius: 0.25rem;
+    }
+
+    .button:focus-visible {
+      outline-offset: 3px;
+    }
   </style>
 </head>
 <body>
