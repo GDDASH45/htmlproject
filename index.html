@@ -176,6 +176,29 @@
       color: var(--muted);
       line-height: 1.75;
     }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .feature-card {
+      padding: 1.4rem;
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      background: linear-gradient(145deg, var(--surface-raised), var(--surface));
+    }
+
+    .feature-card h3 {
+      margin: 0;
+      font-size: 1.08rem;
+    }
+
+    .feature-card p {
+      margin: 0.65rem 0 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
   </style>
 </head>
 <body>
@@ -220,6 +243,27 @@
         <p class="eyebrow">About this site</p>
         <h2 id="about-title">A solid foundation, without the extra weight.</h2>
         <p>Good websites do not need to be complicated. This page uses semantic HTML, a little CSS, and no external framework.</p>
+      </div>
+    </section>
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="section-heading">
+        <p class="eyebrow">What is included</p>
+        <h2 id="features-title">The essentials are already here.</h2>
+        <p>A few useful building blocks make it easier to grow this starter into your own site.</p>
+      </div>
+      <div class="card-grid">
+        <article class="feature-card">
+          <h3>Semantic HTML</h3>
+          <p>Clear page landmarks and meaningful sections help browsers and assistive technology understand the content.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Responsive layout</h3>
+          <p>The layout is designed to adapt to narrow screens as well as larger displays.</p>
+        </article>
+        <article class="feature-card">
+          <h3>No dependencies</h3>
+          <p>Everything on this page is built with plain HTML and CSS, so there is no build step to maintain.</p>
+        </article>
       </div>
     </section>
 
