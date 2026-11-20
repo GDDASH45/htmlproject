@@ -312,6 +312,29 @@
       color: var(--muted);
       line-height: 1.7;
     }
+    .faq-list {
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .faq-list details {
+      padding: 1rem 1.2rem;
+      border: 1px solid var(--border);
+      border-radius: 0.8rem;
+      background: var(--surface);
+    }
+
+    .faq-list summary {
+      color: #eef2ff;
+      font-weight: 650;
+      cursor: pointer;
+    }
+
+    .faq-list details p {
+      margin: 0.8rem 0 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
   </style>
 </head>
 <body>
@@ -407,6 +430,26 @@
         <h3>MDN Web Docs</h3>
         <p>Reference material and guides for HTML, CSS, and JavaScript.</p>
         <p><a class="resource-link" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">Visit MDN Web Docs <span aria-hidden="true">↗</span></a></p>
+      </div>
+    </section>
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="section-heading">
+        <p class="eyebrow">FAQ</p>
+        <h2 id="faq-title">A few quick answers.</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>Does this site need a JavaScript framework?</summary>
+          <p>No. The current page is made with HTML and CSS and can be published as-is.</p>
+        </details>
+        <details>
+          <summary>Can I add JavaScript later?</summary>
+          <p>Yes. You can add scripts when the site needs interactive behavior.</p>
+        </details>
+        <details>
+          <summary>How is the site published?</summary>
+          <p>The GitHub Actions workflow in <code>.github/workflows/pages.yml</code> deploys the repository to GitHub Pages.</p>
+        </details>
       </div>
     </section>
 
