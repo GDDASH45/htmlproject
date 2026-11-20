@@ -26,6 +26,20 @@
       --accent: #9bb8ff;
       --accent-strong: #c2d2ff;
     }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(ellipse at 50% -20%, #1b2b50 0%, #0b1020 55%);
+    }
+
+    a { color: var(--accent); }
+    a:hover { color: var(--accent-strong); }
+
+    .container {
+      width: min(100% - 2rem, 1080px);
+      margin-inline: auto;
+    }
   </style>
 </head>
 <body>
