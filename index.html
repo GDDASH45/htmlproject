@@ -281,6 +281,16 @@
         transition-duration: 0.01ms !important;
       }
     }
+    html { scroll-behavior: smooth; }
+
+    section[id] { scroll-margin-top: 1.5rem; }
+
+    @media (max-width: 420px) {
+      .container { width: min(100% - 1.25rem, 1080px); }
+      .hero h1 { font-size: clamp(2.4rem, 15vw, 3.5rem); }
+      .actions { align-items: stretch; flex-direction: column; }
+      .button { width: 100%; }
+    }
   </style>
 </head>
 <body>
