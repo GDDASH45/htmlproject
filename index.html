@@ -90,10 +90,43 @@
     }
 
     .skip-link:focus { transform: translateY(0); }
+    main { display: block; }
+
+    .hero {
+      padding: clamp(5rem, 12vw, 9rem) 0 5rem;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 1rem;
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 750;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 850px;
+      margin: 0 auto;
+      font-size: clamp(2.7rem, 8vw, 5.5rem);
+      line-height: 1.02;
+      letter-spacing: -0.065em;
+    }
+
+    .hero-copy {
+      max-width: 620px;
+      margin: 1.5rem auto 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.2rem);
+      line-height: 1.8;
+    }
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">
+    Skip to content
+  </a>
 
 <header class="site-header">
     <div class="container header-inner">
@@ -108,14 +141,22 @@
     </div>
   </header>
 
-<main>
+  <main id="main" class="container">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">HTML Project</a>
+      <span class="header-note">A small corner of the web</span>
+    </div>
+  </header>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <main id="main" class="container">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <p class="eyebrow">Welcome</p>
+      <h1 id="hero-title">A simple place to build something great.</h1>
+      <p class="hero-copy">This is a starting point for a website: clear, lightweight, and made with the basics of the web.</p>
+    </section>
 
-  <h1>HTML Project</h1>
-  <p>Welcome to my website!</p>
-  <p>This site is hosted with GitHub Pages.</p>
-
-</main>
-
+  </main>
 
 </body>
 </html>
